@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: it.univaq.disim.mde.course.assignment.four.edit;singleton:=true
+Automatic-Module-Name: it.univaq.disim.mde.course.assignment.four.edit
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: Ecommerce.provider.EcommerceEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-23
+Export-Package: Ecommerce.provider
+Require-Bundle: org.eclipse.core.runtime,
+ it.univaq.disim.mde.course.assignment.four;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

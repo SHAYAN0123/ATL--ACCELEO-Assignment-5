@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Ecommerce -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="Ecommerce.presentation.EcommerceModelWizardID"
+            name="%_UI_EcommerceModelWizard_label"
+            class="Ecommerce.presentation.EcommerceModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EcommerceModelFile.gif">
+         <description>%_UI_EcommerceModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Ecommerce -->
+      <editor
+            id="Ecommerce.presentation.EcommerceEditorID"
+            name="%_UI_EcommerceEditor_label"
+            icon="icons/full/obj16/EcommerceModelFile.gif"
+            extensions="ecommerce"
+            class="Ecommerce.presentation.EcommerceEditor"
+            contributorClass="Ecommerce.presentation.EcommerceActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

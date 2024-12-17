@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EC:EcommercePlatform
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:EC="https://it.univaq.disim.mde.course.assignment.four/Ecommerce"
+    name="ebay"
+    url="ebay.com"
+    description="the not so best place to buy secondhand products">
+  <customers
+      name="Vinay Sanga"
+      id="1"
+      email="vinay@email.com"
+      dateJoined="2024-12-14T00:00:00.000+0100"
+      orders="//@orders.0">
+    <cart id="1"
+        creationDate="2024-12-14T00:00:00.000+0100"
+        lastUpdated="2024-12-14T00:00:00.000+0100">
+      <cartContents
+          id="1"
+          quantity="1"
+          products="//@products.0"/>
+    </cart>
+    <reviews
+        id="1"
+        ratings="4"
+        comment="Good investment"
+        reviewDate="2024-12-14T00:00:00.000+0100"
+        reviewedProduct="//@products.0"/>
+  </customers>
+  <products
+      name="BMW EV"
+      id="1"
+      description="Moderately used BMW"
+      stockQuantity="1"
+      dateAdded="2024-12-31T00:00:00.000+0100"
+      productCategory="//@productCategories.1"
+      appliedPromotions="//@promotions.0"/>
+  <products
+      name="iPhone 13 pro"
+      id="2"
+      description="very used iPhon 13 pro"
+      price="300.0"
+      stockQuantity="10"
+      dateAdded="2024-12-31T00:00:00.000+0100"
+      productCategory="//@productCategories.0"/>
+  <productCategories
+      name="Used Electronics"
+      id="1"
+      description="Used Electronics"
+      products="//@products.1"/>
+  <productCategories
+      name="Used Cars"
+      id="2"
+      description="used cars"
+      products="//@products.0"/>
+  <orders id="1"
+      orderDate="2024-12-10T00:00:00.000+0100"
+      >
+    <paymentDetail
+        id="1"
+        amount="300.0"
+        paymentDate="2024-12-10T00:00:00.000+0100"
+        paidUsing="GooglePay"
+        paymentStatus="Success"/>
+    <shipmentDetail
+        id="1"
+        courierName="FedX"
+        estimatedDelivery="2024-12-31T00:00:00.000+0100"/>
+    <orderItems
+        id="1"
+        quantity="2"
+        product="//@products.1"/>
+  </orders>
+  <promotions
+      name="Best Customers "
+      id="1"
+      description="discount for our best customers"
+      discountPercentage="15"
+      startDate="2024-12-01T00:00:00.000+0100"
+      endDate="2024-12-31T00:00:00.000+0100"/>
+</EC:EcommercePlatform>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/it.univaq.disim.mde.course.assignment.four/src"
+    modelPluginID="it.univaq.disim.mde.course.assignment.four" modelName="Ecommerce"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="23.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>Ecommerce.ecore</foreignModel>
+  <genPackages prefix="Ecommerce" disposableProviderFactory="true" ecorePackage="Ecommerce.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ecommerce.ecore#//OrderStatus">
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//OrderStatus/Pending"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//OrderStatus/Intransit"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//OrderStatus/Delivered"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ecommerce.ecore#//PaymentMethod">
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//PaymentMethod/CreaditCard"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//PaymentMethod/DebitCard"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//PaymentMethod/BankTransaction"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//PaymentMethod/GooglePay"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//PaymentMethod/ApplePay"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ecommerce.ecore#//PaymentStatus">
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//PaymentStatus/Pending"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//PaymentStatus/Success"/>
+      <genEnumLiterals ecoreEnumLiteral="Ecommerce.ecore#//PaymentStatus/Failed"/>
+    </genEnums>
+    <genClasses ecoreClass="Ecommerce.ecore#//EcommercePlatform">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//EcommercePlatform/customers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//EcommercePlatform/products"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//EcommercePlatform/productCategories"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//EcommercePlatform/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//EcommercePlatform/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//EcommercePlatform/orders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//EcommercePlatform/promotions"/>
+      <genOperations ecoreOperation="Ecommerce.ecore#//EcommercePlatform/getAverageOrderValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//Customer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Customer/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Customer/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Customer/dateJoined"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Customer/cart"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Customer/orders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Customer/reviews"/>
+      <genOperations ecoreOperation="Ecommerce.ecore#//Customer/getTotalOrders"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//ProductCategory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//ProductCategory/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//ProductCategory/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//ProductCategory/products"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//Product">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Product/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Product/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Product/price"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Product/stockQuantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Product/dateAdded"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Product/productCategory"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Product/appliedPromotions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Product/productReviews"/>
+      <genOperations ecoreOperation="Ecommerce.ecore#//Product/getAverageRatings"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//Promotion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Promotion/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Promotion/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Promotion/discountPercentage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Promotion/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Promotion/endDate"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//Order">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Order/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Order/orderDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Order/orderStatus"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Order/paymentDetail"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Order/shipmentDetail"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Order/orderItems"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Order/totalAmount"/>
+      <genOperations ecoreOperation="Ecommerce.ecore#//Order/getTotalDiscount"/>
+      <genOperations ecoreOperation="Ecommerce.ecore#//Order/isEligibleForFreeShipping"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//Payment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Payment/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Payment/amount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Payment/paymentDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Payment/paidUsing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Payment/paymentStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//Shipment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Shipment/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Shipment/courierName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Shipment/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Shipment/estimatedDelivery"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//Cart">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Cart/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Cart/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Cart/lastUpdated"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Cart/cartContents"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Cart/cartTotal"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//CartContent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//CartContent/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//CartContent/quantity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//CartContent/products"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//CartContent/price"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//Review">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Review/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Review/ratings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Review/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//Review/reviewDate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//Review/reviewedProduct"/>
+    </genClasses>
+    <genClasses ecoreClass="Ecommerce.ecore#//OrderLineItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//OrderLineItem/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//OrderLineItem/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//OrderLineItem/price"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ecommerce.ecore#//OrderLineItem/product"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Ecommerce.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ecommerce.ecore#//NamedElement/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
