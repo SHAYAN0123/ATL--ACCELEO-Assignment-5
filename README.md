@@ -138,10 +138,3 @@ The implementation consists of two main plugin projects:
 
 ![E-Commerce Metamodel UML](Assignment_4_diagram_4.png)
 
----
-
-## Summary
-
-This project demonstrates the implementation of an **E-Commerce Platform** metamodel using EMF. It showcases various key components, constraints, derived fields, and operations essential to model and manage an e-commerce system effectively.
-
----
