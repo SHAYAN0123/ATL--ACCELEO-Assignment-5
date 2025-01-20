@@ -10,11 +10,11 @@
       name="Minase Mengistu"
       id="1"
       email="minase@email.com"
-      dateJoined="2024-12-13T00:00:00.000+0100"
+      dateJoined="2024-12-13T01:00:00.000+0200"
       orders="//@orders.0">
     <cart id="1"
-        creationDate="2024-12-12T00:00:00.000+0100"
-        lastUpdated="2024-12-12T00:00:00.000+0100">
+        creationDate="2024-12-12T01:00:00.000+0200"
+        lastUpdated="2024-12-12T01:00:00.000+0200">
       <cartContents
           id="1"
           quantity="1"
@@ -28,19 +28,21 @@
         id="1"
         ratings="5"
         comment="Best phone ever"
-        reviewDate="2024-12-09T00:00:00.000+0100"
+        reviewDate="2024-12-09T01:00:00.000+0200"
         reviewedProduct="//@products.1"/>
   </customers>
   <customers
       name="Shayren"
       id="2"
       email="Shayren@email.com"
-      dateJoined="2024-12-12T00:00:00.000+0100">
+      dateJoined="2024-12-12T01:00:00.000+0200">
+    <cart id="1"
+        creationDate="0025-07-17T00:00:00.000+0200"/>
     <reviews
         id="2"
         ratings="2"
         comment="It's just a hype. Will never buy it "
-        reviewDate="2024-12-12T00:00:00.000+0100"
+        reviewDate="2024-12-12T01:00:00.000+0200"
         reviewedProduct="//@products.1"/>
   </customers>
   <products
@@ -49,7 +51,7 @@
       description="Best shoes "
       price="120.0"
       stockQuantity="120000"
-      dateAdded="2024-09-09T00:00:00.000+0200"
+      dateAdded="2024-09-09T01:00:00.000+0300"
       productCategory="//@productCategories.2"/>
   <products
       name="iPhone 16 pro Max"
@@ -57,7 +59,7 @@
       description="The letest phone from apple"
       price="1200.0"
       stockQuantity="1000000"
-      dateAdded="2024-01-01T00:00:00.000+0100"
+      dateAdded="2024-01-01T01:00:00.000+0200"
       productCategory="//@productCategories.0"
       appliedPromotions="//@promotions.0"
       productReviews="//@customers.0/@reviews.0 //@customers.1/@reviews.0"/>
@@ -76,15 +78,15 @@
       description="Everything a human can ware"
       products="//@products.0"/>
   <orders id="1"
-      orderDate="2024-12-12T00:00:00.000+0100">
+      orderDate="2024-12-12T01:00:00.000+0200">
     <paymentDetail
         id="1"
         amount="123.4"
-        paymentDate="2024-12-12T00:00:00.000+0100"/>
+        paymentDate="2024-12-12T01:00:00.000+0200"/>
     <shipmentDetail
         id="1"
         courierName="DHL"
-        estimatedDelivery="2024-12-31T00:00:00.000+0100"/>
+        estimatedDelivery="2024-12-31T01:00:00.000+0200"/>
     <orderItems
         id="1"
         quantity="2"
@@ -99,6 +101,6 @@
       id="1"
       description="X-mas Sale"
       discountPercentage="25"
-      startDate="2024-12-12T00:00:00.000+0100"
-      endDate="2024-12-31T00:00:00.000+0100"/>
+      startDate="2024-12-12T01:00:00.000+0200"
+      endDate="2024-12-31T01:00:00.000+0200"/>
 </EC:EcommercePlatform>

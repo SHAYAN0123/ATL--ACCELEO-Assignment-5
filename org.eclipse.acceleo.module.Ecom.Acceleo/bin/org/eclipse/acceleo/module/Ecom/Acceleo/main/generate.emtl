@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generate" nsURI="org::eclipse::acceleo::module::Ecom::Acceleo::main::generate" startHeaderPosition="29" endHeaderPosition="202">
+    <input>
+      <takesTypesFrom href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public" main="true">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;&lt;head>&#xA;    &lt;title>Ecommerce Platform Overview&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Ecommerce Platform Overview&lt;/h1>&#xA;    &lt;ul>&#xA;        &lt;li>&lt;a href=&quot;Customer.html&quot;>Click to go to the Customers page&lt;/a>&lt;/li>&#xA;        &lt;li>&lt;a href=&quot;product_NikeAirMax.html&quot;>Product: Nike Air Max&lt;/a>&lt;/li>&#xA;        &lt;li>&lt;a href=&quot;product_iPhone16ProMax.html&quot;>Product: iPhone 16 Pro Max&lt;/a>&lt;/li>&#xA;        &lt;li>&lt;a href=&quot;product_category_Electronics.html&quot;>Product Category: Electronics&lt;/a>&lt;/li>&#xA;        &lt;li>&lt;a href=&quot;product_category_Furnitures.html&quot;>Product Category: Furnitures&lt;/a>&lt;/li>&#xA;        &lt;li>&lt;a href=&quot;product_category_Clothes.html&quot;>Product Category: Clothes&lt;/a>&lt;/li>&#xA;        &lt;li>&lt;a href=&quot;order_Order1.html&quot;>Order: Order 1&lt;/a>&lt;/li>&#xA;        &lt;li>&lt;a href=&quot;promotion_XmasSale.html&quot;>Promotion: X-mas Sale&lt;/a>&lt;/li>&#xA;    &lt;/ul>&#xA;&lt;/body>&#xA;&#xA;&#xA;&#x9;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="index.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&lt;h1>This is the Customer page&lt;/h1>&#xA;&lt;ol>&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;div> Name: "/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="eachCust" referredVariable="/0/generateElement/%.2/%.1/eachCust">
+                <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//NamedElement/name"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;/  div>&#xA;&#x9;&#x9;&#x9;&lt;div> Email: "/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="eachCust" referredVariable="/0/generateElement/%.2/%.1/eachCust">
+                <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer/email"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;/div>&#xA;&#x9;&#x9;&#x9;&lt;div> Orders: &#xA;"/>
+            <body xsi:type="mtl:ForBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;ID: "/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="ord" referredVariable="/0/generateElement/%.2/%.1/%/%.5/ord">
+                  <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order/id"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;br/>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Date: "/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="ord" referredVariable="/0/generateElement/%.2/%.1/%/%.5/ord">
+                  <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order/orderDate"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;br/>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Status: "/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EEnum" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//OrderStatus"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="ord" referredVariable="/0/generateElement/%.2/%.1/%/%.5/ord">
+                  <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order/orderStatus"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;br/>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Payment Amount: "/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+                <source xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Payment"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="ord" referredVariable="/0/generateElement/%.2/%.1/%/%.5/ord">
+                    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order/paymentDetail"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Payment/amount"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;"/>
+              <loopVariable name="ord">
+                <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+              </loopVariable>
+              <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(Order)">
+                <source xsi:type="ocl.ecore:VariableExp" name="eachCust" referredVariable="/0/generateElement/%.2/%.1/eachCust">
+                  <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer/orders"/>
+              </iterSet>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&lt;/div>&#xA;&#x9;&#x9;&#x9;&lt;div>&#xA;&#x9;&#x9;&#x9;Cart:&#xA;"/>
+            <body xsi:type="mtl:ForBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&#x9;&#x9;ID: "/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="crt" referredVariable="/0/generateElement/%.2/%.1/%/%.7/crt">
+                  <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Cart"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Cart/id"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;br/>&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Date: "/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="crt" referredVariable="/0/generateElement/%.2/%.1/%/%.7/crt">
+                  <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Cart"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Cart/creationDate"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;br/>&#xA;"/>
+              <loopVariable name="crt">
+                <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Cart"/>
+              </loopVariable>
+              <iterSet xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Cart"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="eachCust" referredVariable="/0/generateElement/%.2/%.1/eachCust">
+                  <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer/cart"/>
+              </iterSet>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;/div>&#xA;"/>
+            <fileUrl xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="eachCust" referredVariable="/0/generateElement/%.2/%.1/eachCust">
+                  <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//NamedElement/name"/>
+              </source>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".html">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+            </fileUrl>
+            <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </charset>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&lt;li>"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="eachCust" referredVariable="/0/generateElement/%.2/%.1/eachCust">
+              <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//NamedElement/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" - &lt;a href=&quot;"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="eachCust" referredVariable="/0/generateElement/%.2/%.1/eachCust">
+              <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//NamedElement/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".html&quot;> View Details &lt;/a> &lt;/li>&#xA;"/>
+          <loopVariable name="eachCust">
+            <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/10/OrderedSet(Customer)">
+            <source xsi:type="ocl.ecore:VariableExp" name="anEcommercePlatform" referredVariable="/0/generateElement/anEcommercePlatform">
+              <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform/customers"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/ol>&#xA;&#x9;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Customer.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;&#xA;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;head>&#xA;    &lt;title>Product: Nike Air Max&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Product: Nike Air Max&lt;/h1>&#xA;    &lt;p>&lt;strong>ID:&lt;/strong> 2&lt;/p>&#xA;    &lt;p>&lt;strong>Name:&lt;/strong> Nike Air Max&lt;/p>&#xA;    &lt;p>&lt;strong>Description:&lt;/strong> Best shoes&lt;/p>&#xA;    &lt;p>&lt;strong>Price:&lt;/strong> $120.00&lt;/p>&#xA;    &lt;p>&lt;strong>Stock Quantity:&lt;/strong> 120,000&lt;/p>&#xA;    &lt;p>&lt;strong>Date Added:&lt;/strong> 2024-09-09&lt;/p>&#xA;    &lt;p>&lt;strong>Product Category:&lt;/strong> Product Category Clothes&lt;/p>&#xA;    &lt;p>&lt;strong>Applied Promotions:&lt;/strong> None&lt;/p>&#xA;    &lt;p>&lt;strong>Product Reviews:&lt;/strong> None&lt;/p>&#xA;&lt;/body>&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="product_NikeAirMax.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;&lt;head>&#xA;    &lt;title>Product: iPhone 16 Pro Max&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Product: iPhone 16 Pro Max&lt;/h1>&#xA;    &lt;p>&lt;strong>ID:&lt;/strong> 3&lt;/p>&#xA;    &lt;p>&lt;strong>Name:&lt;/strong> iPhone 16 Pro Max&lt;/p>&#xA;    &lt;p>&lt;strong>Description:&lt;/strong> The latest phone from Apple&lt;/p>&#xA;    &lt;p>&lt;strong>Price:&lt;/strong> $1200.00&lt;/p>&#xA;    &lt;p>&lt;strong>Stock Quantity:&lt;/strong> 1,000,000&lt;/p>&#xA;    &lt;p>&lt;strong>Date Added:&lt;/strong> 2024-01-01&lt;/p>&#xA;    &lt;p>&lt;strong>Product Category:&lt;/strong> Product Category Electronics&lt;/p>&#xA;    &lt;p>&lt;strong>Applied Promotions:&lt;/strong> Promotion X-mas Sale&lt;/p>&#xA;    &lt;p>&lt;strong>Product Reviews:&lt;/strong>&lt;/p>&#xA;    &lt;ul>&#xA;        &lt;li>Review: Best phone ever&lt;/li>&#xA;        &lt;li>Review: It's just a hype. Will never buy it&lt;/li>&#xA;    &lt;/ul>&#xA;&lt;/body>&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="product_iPhone16ProMax.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&lt;head>&#xA;    &lt;title>Product Category: Electronics&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Product Category: Electronics&lt;/h1>&#xA;    &lt;p>&lt;strong>ID:&lt;/strong> 1&lt;/p>&#xA;    &lt;p>&lt;strong>Name:&lt;/strong> Electronics&lt;/p>&#xA;    &lt;p>&lt;strong>Description:&lt;/strong> everything powered by electric&lt;/p>&#xA;    &lt;p>&lt;strong>Products:&lt;/strong>&lt;/p>&#xA;    &lt;ul>&#xA;        &lt;li>&lt;a href=&quot;product_iPhone16ProMax.html&quot;>Product: iPhone 16 Pro Max&lt;/a>&lt;/li>&#xA;    &lt;/ul>&#xA;&lt;/body>&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="product_category_Electronics.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&lt;head>&#xA;    &lt;title>Product Category: Furnitures&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Product Category: Furnitures&lt;/h1>&#xA;    &lt;p>&lt;strong>ID:&lt;/strong> 2&lt;/p>&#xA;    &lt;p>&lt;strong>Name:&lt;/strong> Furnitures&lt;/p>&#xA;    &lt;p>&lt;strong>Description:&lt;/strong> Everything used in a household&lt;/p>&#xA;    &lt;p>&lt;strong>Products:&lt;/strong> None available&lt;/p>&#xA;&lt;/body>&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="product_category_Furnitures.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;&lt;head>&#xA;    &lt;title>Product Category: Clothes&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Product Category: Clothes&lt;/h1>&#xA;    &lt;p>&lt;strong>ID:&lt;/strong> 3&lt;/p>&#xA;    &lt;p>&lt;strong>Name:&lt;/strong> Clothes&lt;/p>&#xA;    &lt;p>&lt;strong>Description:&lt;/strong> Everything a human can wear&lt;/p>&#xA;    &lt;p>&lt;strong>Products:&lt;/strong>&lt;/p>&#xA;    &lt;ul>&#xA;        &lt;li>&lt;a href=&quot;product_NikeAirMax.html&quot;>Product: Nike Air Max&lt;/a>&lt;/li>&#xA;    &lt;/ul>&#xA;&lt;/body>&#xA;&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="product_category_Clothes.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;head>&#xA;    &lt;title>Order: Order 1&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Order: Order 1&lt;/h1>&#xA;    &lt;p>&lt;strong>Payment:&lt;/strong> &lt;a href=&quot;payment_1.html&quot;>Payment 1&lt;/a>&lt;/p>&#xA;    &lt;p>&lt;strong>Shipment:&lt;/strong> &lt;a href=&quot;shipment_DHL.html&quot;>Shipment DHL&lt;/a>&lt;/p>&#xA;    &lt;p>&lt;strong>Order Items:&lt;/strong>&lt;/p>&#xA;    &lt;ul>&#xA;        &lt;li>&lt;a href=&quot;order_item_1.html&quot;>Order Line Item 1&lt;/a>&lt;/li>&#xA;        &lt;li>&lt;a href=&quot;order_item_2.html&quot;>Order Line Item 2&lt;/a>&lt;/li>&#xA;    &lt;/ul>&#xA;&lt;/body>&#xA;&#xA;&#x9;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="order_Order1.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;&lt;head>&#xA;    &lt;title>Payment: Payment 1&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Payment: Payment 1&lt;/h1>&#xA;    &lt;p>&lt;strong>ID:&lt;/strong> 1&lt;/p>&#xA;    &lt;p>&lt;strong>Amount:&lt;/strong> $123.40&lt;/p>&#xA;    &lt;p>&lt;strong>Paid Using:&lt;/strong> CreditCard&lt;/p>&#xA;    &lt;p>&lt;strong>Payment Date:&lt;/strong> 2024-12-12&lt;/p>&#xA;    &lt;p>&lt;strong>Payment Status:&lt;/strong> Pending&lt;/p>&#xA;&lt;/body>&#xA;&#xA;&#x9;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="payment_1.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&lt;head>&#xA;    &lt;title>Shipment: DHL&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Shipment: DHL&lt;/h1>&#xA;    &lt;p>&lt;strong>ID:&lt;/strong> 1&lt;/p>&#xA;    &lt;p>&lt;strong>Courier Name:&lt;/strong> DHL&lt;/p>&#xA;    &lt;p>&lt;strong>Cost:&lt;/strong> $0.00&lt;/p>&#xA;    &lt;p>&lt;strong>Estimated Delivery:&lt;/strong> 2024-12-31&lt;/p>&#xA;&lt;/body>&#xA;&#xA;&#x9;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="shipment_DHL.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&lt;head>&#xA;    &lt;title>Order Line Item: 1&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Order Line Item: 1&lt;/h1>&#xA;    &lt;p>&lt;strong>ID:&lt;/strong> 1&lt;/p>&#xA;    &lt;p>&lt;strong>Product:&lt;/strong> &lt;a href=&quot;product_NikeAirMax.html&quot;>Nike Air Max&lt;/a>&lt;/p>&#xA;    &lt;p>&lt;strong>Quantity:&lt;/strong> 2&lt;/p>&#xA;&lt;/body>&#xA;&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="order_item_1.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;&lt;head>&#xA;    &lt;title>Order Line Item: 2&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Order Line Item: 2&lt;/h1>&#xA;    &lt;p>&lt;strong>ID:&lt;/strong> 2&lt;/p>&#xA;    &lt;p>&lt;strong>Product:&lt;/strong> &lt;a href=&quot;product_iPhone16ProMax.html&quot;>iPhone 16 Pro Max&lt;/a>&lt;/p>&#xA;    &lt;p>&lt;strong>Quantity:&lt;/strong> 1&lt;/p>&#xA;&lt;/body>&#xA;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="order_item_2.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;head>&#xA;    &lt;title>Promotion: X-mas Sale&lt;/title>&#xA;&lt;/head>&#xA;&lt;body>&#xA;    &lt;h1>Promotion: X-mas Sale&lt;/h1>&#xA;    &lt;p>&lt;strong>ID:&lt;/strong> 1&lt;/p>&#xA;    &lt;p>&lt;strong>Name:&lt;/strong> X-mas Sale&lt;/p>&#xA;    &lt;p>&lt;strong>Description:&lt;/strong> X-mas Sale&lt;/p>&#xA;    &lt;p>&lt;strong>Discount Percentage:&lt;/strong> 25%&lt;/p>&#xA;    &lt;p>&lt;strong>Start Date:&lt;/strong> 2024-12-12&lt;/p>&#xA;    &lt;p>&lt;strong>End Date:&lt;/strong> 2024-12-31&lt;/p>&#xA;&lt;/body>&#xA;&#x9;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="promotion_XmasSale.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
+      <parameter name="anEcommercePlatform">
+        <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="+">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateElement"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anEcommercePlatform">
+          <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Ecommerce_EcommercePlatform_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Customer)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Order)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Order"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Cart"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Cart"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Cart"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//Customer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="https://it.univaq.disim.mde.course.assignment.four/Ecommerce#//EcommercePlatform"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateElement">
+      <details key="start" value="113"/>
+      <details key="end" value="6927"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateElement/%">
+      <details key="start" value="205"/>
+      <details key="end" value="1051"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateElement/%/%">
+      <details key="start" value="243"/>
+      <details key="end" value="1044"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateElement/%/%.1">
+      <details key="start" value="212"/>
+      <details key="end" value="224"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateElement/%/%.2">
+      <details key="start" value="233"/>
+      <details key="end" value="240"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateElement/%.1">
+      <details key="start" value="1052"/>
+      <details key="end" value="1053"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateElement/%.2">
+      <details key="start" value="1053"/>
+      <details key="end" value="1822"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateElement/%.2/%">
+      <details key="start" value="1094"/>
+      <details key="end" value="1135"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateElement/%.2/%.1">
+      <details key="start" value="1136"/>
+      <details key="end" value="1806"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateElement/%.2/%.1/%">
+      <details key="start" value="1198"/>
+      <details key="end" value="1716"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateElement/%.2/%.1/%/%">
+      <details key="start" value="1245"/>
+      <details key="end" value="1260"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateElement/%.2/%.1/%/%.1">
+      <details key="start" value="1261"/>
+      <details key="end" value="1274"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateElement/%.2/%.1/%/%.1/eachCust">
+      <details key="start" value="1261"/>
+      <details key="end" value="1269"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateElement/%.2/%.1/%/%.2">
+      <details key="start" value="1276"/>
+      <details key="end" value="1302"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateElement/%.2/%.1/%/%.3">
+      <details key="start" value="1303"/>
+      <details key="end" value="1317"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateElement/%.2/%.1/%/%.3/eachCust">
+      <details key="start" value="1303"/>
+      <details key="end" value="1311"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateElement/%.2/%.1/%/%.4">
+      <details key="start" value="1319"/>
+      <details key="end" value="1345"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateElement/%.2/%.1/%/%.5">
+      <details key="start" value="1349"/>
+      <details key="end" value="1549"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateElement/%.2/%.1/%/%.5/%">
+      <details key="start" value="1387"/>
+      <details key="end" value="1396"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateElement/%.2/%.1/%/%.5/%.1">
+      <details key="start" value="1397"/>
+      <details key="end" value="1403"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateElement/%.2/%.1/%/%.5/%.1/ord">
+      <details key="start" value="1397"/>
+      <details key="end" value="1400"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateElement/%.2/%.1/%/%.5/%.2">
+      <details key="start" value="1405"/>
+      <details key="end" value="1423"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateElement/%.2/%.1/%/%.5/%.3">
+      <details key="start" value="1424"/>
+      <details key="end" value="1437"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateElement/%.2/%.1/%/%.5/%.3/ord">
+      <details key="start" value="1424"/>
+      <details key="end" value="1427"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateElement/%.2/%.1/%/%.5/%.4">
+      <details key="start" value="1439"/>
+      <details key="end" value="1459"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateElement/%.2/%.1/%/%.5/%.5">
+      <details key="start" value="1460"/>
+      <details key="end" value="1475"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateElement/%.2/%.1/%/%.5/%.5/ord">
+      <details key="start" value="1460"/>
+      <details key="end" value="1463"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateElement/%.2/%.1/%/%.5/%.6">
+      <details key="start" value="1477"/>
+      <details key="end" value="1505"/>
+      <details key="line" value="43"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateElement/%.2/%.1/%/%.5/%.7">
+      <details key="start" value="1506"/>
+      <details key="end" value="1530"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateElement/%.2/%.1/%/%.5/%.7/%">
+      <details key="start" value="1506"/>
+      <details key="end" value="1523"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateElement/%.2/%.1/%/%.5/%.7/%/ord">
+      <details key="start" value="1506"/>
+      <details key="end" value="1509"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateElement/%.2/%.1/%/%.5/%.8">
+      <details key="start" value="1532"/>
+      <details key="end" value="1539"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateElement/%.2/%.1/%/%.5/ord">
+      <details key="start" value="1355"/>
+      <details key="end" value="1366"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateElement/%.2/%.1/%/%.5/%.9">
+      <details key="start" value="1369"/>
+      <details key="end" value="1384"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateElement/%.2/%.1/%/%.5/%.9/eachCust">
+      <details key="start" value="1369"/>
+      <details key="end" value="1377"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateElement/%.2/%.1/%/%.6">
+      <details key="start" value="1550"/>
+      <details key="end" value="1584"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateElement/%.2/%.1/%/%.7">
+      <details key="start" value="1588"/>
+      <details key="end" value="1696"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateElement/%.2/%.1/%/%.7/%">
+      <details key="start" value="1624"/>
+      <details key="end" value="1633"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateElement/%.2/%.1/%/%.7/%.1">
+      <details key="start" value="1634"/>
+      <details key="end" value="1640"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateElement/%.2/%.1/%/%.7/%.1/crt">
+      <details key="start" value="1634"/>
+      <details key="end" value="1637"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateElement/%.2/%.1/%/%.7/%.2">
+      <details key="start" value="1642"/>
+      <details key="end" value="1660"/>
+      <details key="line" value="53"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateElement/%.2/%.1/%/%.7/%.3">
+      <details key="start" value="1661"/>
+      <details key="end" value="1677"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateElement/%.2/%.1/%/%.7/%.3/crt">
+      <details key="start" value="1661"/>
+      <details key="end" value="1664"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateElement/%.2/%.1/%/%.7/%.4">
+      <details key="start" value="1679"/>
+      <details key="end" value="1686"/>
+      <details key="line" value="54"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateElement/%.2/%.1/%/%.7/crt">
+      <details key="start" value="1594"/>
+      <details key="end" value="1604"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateElement/%.2/%.1/%/%.7/%.5">
+      <details key="start" value="1607"/>
+      <details key="end" value="1620"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateElement/%.2/%.1/%/%.7/%.5/eachCust">
+      <details key="start" value="1607"/>
+      <details key="end" value="1615"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateElement/%.2/%.1/%/%.8">
+      <details key="start" value="1697"/>
+      <details key="end" value="1707"/>
+      <details key="line" value="56"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateElement/%.2/%.1/%/%.9">
+      <details key="start" value="1205"/>
+      <details key="end" value="1226"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateElement/%.2/%.1/%/%.9/%">
+      <details key="start" value="1205"/>
+      <details key="end" value="1218"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateElement/%.2/%.1/%/%.9/%/eachCust">
+      <details key="start" value="1205"/>
+      <details key="end" value="1213"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateElement/%.2/%.1/%/%.9/%.1">
+      <details key="start" value="1219"/>
+      <details key="end" value="1226"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateElement/%.2/%.1/%/%.10">
+      <details key="start" value="1235"/>
+      <details key="end" value="1242"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateElement/%.2/%.1/%.1">
+      <details key="start" value="1717"/>
+      <details key="end" value="1723"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateElement/%.2/%.1/%.2">
+      <details key="start" value="1724"/>
+      <details key="end" value="1737"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateElement/%.2/%.1/%.2/eachCust">
+      <details key="start" value="1724"/>
+      <details key="end" value="1732"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateElement/%.2/%.1/%.3">
+      <details key="start" value="1739"/>
+      <details key="end" value="1751"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateElement/%.2/%.1/%.4">
+      <details key="start" value="1752"/>
+      <details key="end" value="1765"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateElement/%.2/%.1/%.4/eachCust">
+      <details key="start" value="1752"/>
+      <details key="end" value="1760"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateElement/%.2/%.1/%.5">
+      <details key="start" value="1767"/>
+      <details key="end" value="1799"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateElement/%.2/%.1/eachCust">
+      <details key="start" value="1142"/>
+      <details key="end" value="1161"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateElement/%.2/%.1/%.6">
+      <details key="start" value="1164"/>
+      <details key="end" value="1193"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateElement/%.2/%.1/%.6/anEcommercePlatform">
+      <details key="start" value="1164"/>
+      <details key="end" value="1183"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateElement/%.2/%.2">
+      <details key="start" value="1807"/>
+      <details key="end" value="1815"/>
+      <details key="line" value="60"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateElement/%.2/%.3">
+      <details key="start" value="1060"/>
+      <details key="end" value="1075"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateElement/%.2/%.4">
+      <details key="start" value="1084"/>
+      <details key="end" value="1091"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateElement/%.3">
+      <details key="start" value="1823"/>
+      <details key="end" value="1827"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateElement/%.4">
+      <details key="start" value="1827"/>
+      <details key="end" value="2445"/>
+      <details key="line" value="67"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateElement/%.4/%">
+      <details key="start" value="1878"/>
+      <details key="end" value="2438"/>
+      <details key="line" value="68"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateElement/%.4/%.1">
+      <details key="start" value="1834"/>
+      <details key="end" value="1859"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateElement/%.4/%.2">
+      <details key="start" value="1868"/>
+      <details key="end" value="1875"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateElement/%.5">
+      <details key="start" value="2446"/>
+      <details key="end" value="2448"/>
+      <details key="line" value="85"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateElement/%.6">
+      <details key="start" value="2448"/>
+      <details key="end" value="3243"/>
+      <details key="line" value="87"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generateElement/%.6/%">
+      <details key="start" value="2503"/>
+      <details key="end" value="3236"/>
+      <details key="line" value="88"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generateElement/%.6/%.1">
+      <details key="start" value="2455"/>
+      <details key="end" value="2484"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generateElement/%.6/%.2">
+      <details key="start" value="2493"/>
+      <details key="end" value="2500"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/generateElement/%.7">
+      <details key="start" value="3244"/>
+      <details key="end" value="3247"/>
+      <details key="line" value="111"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/generateElement/%.8">
+      <details key="start" value="3247"/>
+      <details key="end" value="3734"/>
+      <details key="line" value="114"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/generateElement/%.8/%">
+      <details key="start" value="3308"/>
+      <details key="end" value="3727"/>
+      <details key="line" value="115"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/generateElement/%.8/%.1">
+      <details key="start" value="3254"/>
+      <details key="end" value="3289"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/generateElement/%.8/%.2">
+      <details key="start" value="3298"/>
+      <details key="end" value="3305"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/generateElement/%.9">
+      <details key="start" value="3735"/>
+      <details key="end" value="3736"/>
+      <details key="line" value="131"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/generateElement/%.10">
+      <details key="start" value="3736"/>
+      <details key="end" value="4129"/>
+      <details key="line" value="132"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/generateElement/%.10/%">
+      <details key="start" value="3796"/>
+      <details key="end" value="4122"/>
+      <details key="line" value="133"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/generateElement/%.10/%.1">
+      <details key="start" value="3743"/>
+      <details key="end" value="3777"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/generateElement/%.10/%.2">
+      <details key="start" value="3786"/>
+      <details key="end" value="3793"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/generateElement/%.11">
+      <details key="start" value="4130"/>
+      <details key="end" value="4131"/>
+      <details key="line" value="146"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/generateElement/%.12">
+      <details key="start" value="4131"/>
+      <details key="end" value="4592"/>
+      <details key="line" value="147"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/generateElement/%.12/%">
+      <details key="start" value="4188"/>
+      <details key="end" value="4585"/>
+      <details key="line" value="148"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generateElement/%.12/%.1">
+      <details key="start" value="4138"/>
+      <details key="end" value="4169"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generateElement/%.12/%.2">
+      <details key="start" value="4178"/>
+      <details key="end" value="4185"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generateElement/%.13">
+      <details key="start" value="4593"/>
+      <details key="end" value="4594"/>
+      <details key="line" value="166"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/generateElement/%.14">
+      <details key="start" value="4594"/>
+      <details key="end" value="5094"/>
+      <details key="line" value="167"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/generateElement/%.14/%">
+      <details key="start" value="4639"/>
+      <details key="end" value="5087"/>
+      <details key="line" value="168"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/generateElement/%.14/%.1">
+      <details key="start" value="4601"/>
+      <details key="end" value="4620"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generateElement/%.14/%.2">
+      <details key="start" value="4629"/>
+      <details key="end" value="4636"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generateElement/%.15">
+      <details key="start" value="5095"/>
+      <details key="end" value="5096"/>
+      <details key="line" value="184"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generateElement/%.16">
+      <details key="start" value="5096"/>
+      <details key="end" value="5484"/>
+      <details key="line" value="185"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generateElement/%.16/%">
+      <details key="start" value="5138"/>
+      <details key="end" value="5477"/>
+      <details key="line" value="186"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generateElement/%.16/%.1">
+      <details key="start" value="5103"/>
+      <details key="end" value="5119"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generateElement/%.16/%.2">
+      <details key="start" value="5128"/>
+      <details key="end" value="5135"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/generateElement/%.17">
+      <details key="start" value="5485"/>
+      <details key="end" value="5487"/>
+      <details key="line" value="202"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/generateElement/%.18">
+      <details key="start" value="5487"/>
+      <details key="end" value="5812"/>
+      <details key="line" value="204"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/generateElement/%.18/%">
+      <details key="start" value="5532"/>
+      <details key="end" value="5805"/>
+      <details key="line" value="205"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/generateElement/%.18/%.1">
+      <details key="start" value="5494"/>
+      <details key="end" value="5513"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/generateElement/%.18/%.2">
+      <details key="start" value="5522"/>
+      <details key="end" value="5529"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/generateElement/%.19">
+      <details key="start" value="5813"/>
+      <details key="end" value="5814"/>
+      <details key="line" value="219"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/generateElement/%.20">
+      <details key="start" value="5814"/>
+      <details key="end" value="6131"/>
+      <details key="line" value="220"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/generateElement/%.20/%">
+      <details key="start" value="5859"/>
+      <details key="end" value="6124"/>
+      <details key="line" value="221"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/generateElement/%.20/%.1">
+      <details key="start" value="5821"/>
+      <details key="end" value="5840"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/generateElement/%.20/%.2">
+      <details key="start" value="5849"/>
+      <details key="end" value="5856"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/generateElement/%.21">
+      <details key="start" value="6132"/>
+      <details key="end" value="6133"/>
+      <details key="line" value="234"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/generateElement/%.22">
+      <details key="start" value="6133"/>
+      <details key="end" value="6459"/>
+      <details key="line" value="235"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/generateElement/%.22/%">
+      <details key="start" value="6178"/>
+      <details key="end" value="6452"/>
+      <details key="line" value="236"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/generateElement/%.22/%.1">
+      <details key="start" value="6140"/>
+      <details key="end" value="6159"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/generateElement/%.22/%.2">
+      <details key="start" value="6168"/>
+      <details key="end" value="6175"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/generateElement/%.23">
+      <details key="start" value="6460"/>
+      <details key="end" value="6462"/>
+      <details key="line" value="249"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/generateElement/%.24">
+      <details key="start" value="6462"/>
+      <details key="end" value="6912"/>
+      <details key="line" value="251"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/generateElement/%.24/%">
+      <details key="start" value="6513"/>
+      <details key="end" value="6905"/>
+      <details key="line" value="252"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/generateElement/%.24/%.1">
+      <details key="start" value="6469"/>
+      <details key="end" value="6494"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/generateElement/%.24/%.2">
+      <details key="start" value="6503"/>
+      <details key="end" value="6510"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/generateElement/%.25">
+      <details key="start" value="6913"/>
+      <details key="end" value="6915"/>
+      <details key="line" value="266"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/generateElement/anEcommercePlatform">
+      <details key="start" value="146"/>
+      <details key="end" value="185"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

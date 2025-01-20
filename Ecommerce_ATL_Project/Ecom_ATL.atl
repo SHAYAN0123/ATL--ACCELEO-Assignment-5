@@ -1,0 +1,200 @@
+-- @path EcomMain=/it.univaq.disim.mde.course.assignment.four/model/Ecommerce.ecore
+-- @path EcomModified=/Modified_Ecommerce/model/Modified_Ecommerce.ecore
+
+module EcomATL;
+create OUT : EcomModified from IN : EcomMain;
+
+-- Rule for transforming EcommercePlatform
+rule EcommercePlatformMapping {
+    from
+        ep : EcomMain!EcommercePlatform
+    to
+        epNew : EcomModified!EcommercePlatform (
+            name <- ep.name,
+            url <- ep.url,
+            customers <- ep.customers -- Reference to Customer
+        )
+}
+
+-- Rule for transforming Customer
+rule CustomerMapping {
+    from
+        c : EcomMain!Customer
+    to
+        cNew : EcomModified!Customer (
+            name <- c.name,
+            id <- c.id
+        )
+}
+
+-- Rule for transforming Cart
+rule CartMapping {
+    from
+        cart : EcomMain!Cart
+    to
+        cartNew : EcomModified!Cart (
+            id <- cart.id,
+            creationDate <- cart.creationDate,
+            lastUpdated <- cart.lastUpdated
+        )
+}
+
+-- Rule for transforming Promotion
+rule PromotionMapping {
+    from
+        promo : EcomMain!Promotion
+    to
+        promoNew : EcomModified!Promotion (
+            name <- promo.name,
+            id <- promo.id,
+            description <- promo.description,
+            discountPercentage <- promo.discountPercentage,
+            startDate <- promo.startDate,
+            endDate <- promo.endDate
+        )
+}
+
+-- Rule for transforming Review
+rule ReviewMapping {
+    from
+        r : EcomMain!Review
+    to
+        rNew : EcomModified!Review (
+            id <- r.id,
+            ratings <- r.ratings,
+            comment <- r.comment,
+            reviewDate <- r.reviewDate
+        )
+}
+
+-- Rule for transforming Shipment
+rule ShipmentMapping {
+    from
+        s : EcomMain!Shipment
+    to
+        sNew : EcomModified!Shipment (
+            id <- s.id,
+            courierName <- s.courierName,
+            cost <- s.cost,
+            estimatedDelivery <- s.estimatedDelivery
+        )
+}
+
+
+-- Rule for transforming CartContent
+rule CartContentMapping {
+    from
+        cc : EcomMain!CartContent
+    to
+        ccNew : EcomModified!CartContent (
+            id <- cc.id,
+            quantity <- cc.quantity
+        )
+}
+
+
+-- Rule for transforming ProductCategory
+rule ProductCategoryMapping {
+    from
+        pc : EcomMain!ProductCategory
+    to
+        pcNew : EcomModified!ProductCategory (
+            id <- pc.id,
+            name <- pc.name,
+            description <- pc.description
+        )
+}
+
+
+-- Rule for transforming Electronics (subclass of ProductItem)
+rule ElectronicsMapping {
+    from
+        e : EcomMain!Product (e.name.startsWith('Electronics')) -- Example filter for electronics
+    to
+        electronics : EcomModified!Electronics (
+            name <- e.name,
+            id <- e.id,
+            description <- e.description,
+            price <- e.price,
+            stockQuantity <- e.stockQuantity,
+            warrantyPeriod <- 12 -- Default warranty period for electronics
+        )
+}
+
+-- Rule for transforming Clothing (subclass of ProductItem)
+rule ClothingMapping {
+    from
+        c : EcomMain!Product (c.name.startsWith('Clothing')) -- Example filter for clothing
+    to
+        clothing : EcomModified!Clothing (
+            name <- c.name,
+            id <- c.id,
+            description <- c.description,
+            price <- c.price,
+            stockQuantity <- c.stockQuantity,
+            size <- 'M', -- Default size
+            material <- 'Cotton' -- Default material
+        )
+}
+
+
+
+
+
+-- Rule for general Order mapping (non-discounted orders)
+rule OrderMapping {
+    from
+        order : EcomMain!Order (order.orderItems->collect(item | item.quantity * item.product.price)->sum() < 100.0) -- Non-discounted orders
+    to
+        orderNew : EcomModified!Order (
+            id <- order.id,
+            orderDate <- order.orderDate,
+            orderStatus <- order.orderStatus,
+            paymentDetail <- order.paymentDetail,
+            shipmentDetail <- order.shipmentDetail,
+            orderItems <- order.orderItems
+        )
+}
+
+-- Rule for DiscountedOrder mapping (discounted orders)
+rule DiscountedOrderMapping {
+    from
+        order : EcomMain!Order (order.orderItems->collect(item | item.quantity * item.product.price)->sum() >= 100.0) -- Discounted orders
+    to
+        discountedOrder : EcomModified!DiscountedOrder (
+            id <- order.id,
+            orderDate <- order.orderDate,
+            orderStatus <- order.orderStatus,
+            paymentDetail <- order.paymentDetail,
+            shipmentDetail <- order.shipmentDetail,
+            orderItems <- order.orderItems,
+            discountAmount <- order.orderItems->collect(item | item.quantity * item.product.price)->sum() * 0.1 -- Calculate 10% discount
+        )
+}
+
+
+
+
+
+
+
+rule OrderLineItemMapping {
+    from
+        oli : EcomMain!OrderLineItem
+    to
+        oliNew : EcomModified!OrderLineItem (
+            id <- oli.id,
+            quantity <- oli.quantity,
+            product <- oli.product -- Ensure the product reference is mapped
+        )
+}
+
+
+
+
+
+
+
+
+
+

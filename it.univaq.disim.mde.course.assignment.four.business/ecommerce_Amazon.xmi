@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<EC:EcommercePlatform xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:EC="https://it.univaq.disim.mde.course.assignment.four/Ecommerce" name="Amazon E-Commerce Platform" url="amazon.com" description="The biggest E-Commerce platform on earth">
+  <customers name="Minase Mengistu" id="1" email="minase@email.com" orders="//@orders.0">
+    <cart id="1" creationDate="2024-12-17T18:00:33.169+0100" lastUpdated="2024-12-17T18:00:33.169+0100" cartTotal="1600.0">
+      <cartContents id="1" quantity="2" products="//@products.0" price="1600.0"/>
+    </cart>
+    <reviews id="1" ratings="4" comment="Excellent laptop, great value for the price!" reviewDate="2024-12-17T18:00:33.174+0100" reviewedProduct="//@products.0"/>
+  </customers>
+  <customers name="Vinay Sanga" id="2" email="vinay@email.com">
+    <reviews id="2" ratings="4" comment="Good performance, but could improve battery life." reviewDate="2024-12-17T18:00:33.174+0100" reviewedProduct="//@products.0"/>
+    <reviews id="2" ratings="2" comment="Good smartphone, but battery life could be better." reviewDate="2024-12-17T18:00:33.174+0100" reviewedProduct="//@products.1"/>
+  </customers>
+  <customers name="Muhammad Shayan" id="3" email="shayan@email.com">
+    <reviews id="3" ratings="3" comment="Decent product, but overpriced." reviewDate="2024-12-17T18:00:33.174+0100" reviewedProduct="//@products.0"/>
+  </customers>
+  <products name="Laptop" id="1" price="1000.0" stockQuantity="50" dateAdded="2024-12-17T18:00:33.167+0100" productCategory="//@productCategories.0" appliedPromotions="//@promotions.0" productReviews="//@customers.0/@reviews.0 //@customers.1/@reviews.0 //@customers.2/@reviews.0"/>
+  <products name="Smartphone" id="2" price="700.0" stockQuantity="100" dateAdded="2024-12-17T18:00:33.167+0100" productCategory="//@productCategories.0" productReviews="//@customers.1/@reviews.1"/>
+  <productCategories name="Electronics" id="1" products="//@products.0 //@products.1"/>
+  <orders id="1" orderDate="2024-12-17T18:00:33.171+0100" totalAmount="1000.0">
+    <paymentDetail id="1" amount="1000.0" paymentDate="2024-12-17T18:00:33.172+0100" paymentStatus="Success"/>
+    <shipmentDetail id="1" courierName="FedEx" cost="20.0" estimatedDelivery="2024-12-22T18:00:33.173+0100"/>
+    <orderItems id="1" quantity="1" price="1000.0" product="//@products.0"/>
+  </orders>
+  <promotions name="Summer Sale" id="1" discountPercentage="20" startDate="2024-12-17T18:00:33.168+0100" endDate="2024-12-24T18:00:33.168+0100"/>
+</EC:EcommercePlatform>

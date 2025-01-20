@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:EC="https://it.univaq.disim.mde.course.assignment.five/Ecommerce">
+  <EC:EcommercePlatform name="Amazon" url="amazon.com">
+    <customers name="Minase Mengistu" id="1"/>
+    <customers name="Shayren" id="2"/>
+  </EC:EcommercePlatform>
+  <EC:Cart id="1" creationDate="2024-12-12T01:00:00.000+0200" lastUpdated="2024-12-12T01:00:00.000+0200"/>
+  <EC:Cart id="1" creationDate="0025-07-17T00:00:00.000+0200"/>
+  <EC:Promotion name="X-mas Sale" id="1" description="X-mas Sale" discountPercentage="25" startDate="2024-12-12T01:00:00.000+0200" endDate="2024-12-31T01:00:00.000+0200"/>
+  <EC:Review id="1" ratings="5" comment="Best phone ever" reviewDate="2024-12-09T01:00:00.000+0200"/>
+  <EC:Review id="2" ratings="2" comment="It's just a hype. Will never buy it " reviewDate="2024-12-12T01:00:00.000+0200"/>
+  <EC:CartContent id="1" quantity="1"/>
+  <EC:CartContent id="2" quantity="1"/>
+  <EC:ProductCategory name="Electronics" id="1" description="everything powered by electric "/>
+  <EC:ProductCategory name="Furnitures " id="2" description="Everything used in a household "/>
+  <EC:ProductCategory name="Clothes " id="3" description="Everything a human can ware"/>
+  <EC:DiscountedOrder id="1" orderDate="2024-12-12T01:00:00.000+0200" discountAmount="144.0">
+    <shipmentDetail id="1" courierName="DHL" estimatedDelivery="2024-12-31T01:00:00.000+0200"/>
+    <orderItems id="1" quantity="2"/>
+    <orderItems id="2" quantity="1"/>
+  </EC:DiscountedOrder>
+</xmi:XMI>

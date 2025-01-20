@@ -25,7 +25,7 @@ import Ecommerce.Review;
 import Ecommerce.Shipment;
 
 public class ModelManager {
-    private static final String MODEL_URI = "ecommerce.xmi";
+    private static final String MODEL_URI = "ecommerce_Amazon.xmi";
 
    
  // Method to create the ECommercePlatform model
